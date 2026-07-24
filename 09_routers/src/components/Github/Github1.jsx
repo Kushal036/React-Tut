@@ -23,5 +23,5 @@ export default GithubHC
 
 export const CallTheApi  = async () =>{
   const data = await fetch(`https://api.github.com/users/hiteshchoudhary`)
-  return data.json
-}
+  return data.json()
+} 
