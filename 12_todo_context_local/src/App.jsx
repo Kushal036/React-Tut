@@ -20,9 +20,10 @@ function App() {
     setTodos((prev)=> prev.map((prevTodo)=>prevTodo.id === id ? todo : prevTodo ))
   }
 
-  const deleteTodo = (id)=>{
-    setTodos((perv)=> perv.filter((prevTodo)=> prevTodo===!id))
-  }
+
+  const deleteTodo = (id) => {
+  setTodos((prev) => prev.filter((prevTodo) => prevTodo.id !== id))
+}
   const toggleComplete = (id)=>{
     setTodos((prev)=> prev
     .map((oneTodo)=> oneTodo.id===id ? {...oneTodo ,completed:!oneTodo.completed }:oneTodo))

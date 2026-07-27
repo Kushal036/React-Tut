@@ -1,9 +1,9 @@
-import React, { useContext, useState } from 'react'
+import React, { useContext, useState  } from 'react'
 import { TodoContext } from '../context/TodoContext';
 
 function TodoItem({ todo }) {
     const [isTodoEditable , setIsTodoEditable ]= useState(false)
-    const [todoMsg , setTodoMsg] = useState('')
+    const [todoMsg , setTodoMsg] = useState(todo.todo)
 
     
     const { updateTodo ,deleteTodo , toggleComplete } = useContext(TodoContext)
