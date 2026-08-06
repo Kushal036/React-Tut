@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="512" height="512" viewBox="0 0 512 512">
+  <defs>
+    <linearGradient id="bg-grad" x1="74.99999999999999%" y1="6.698729810778062%" x2="25.00000000000001%" y2="93.30127018922194%">
+        <stop offset="0%" stop-color="#0f3175"/>
+        <stop offset="100%" stop-color="#0f1571"/>
+      </linearGradient>
+    <clipPath id="canvas-clip">
+      <rect width="512" height="512" rx="200" ry="200"/>
+    </clipPath>
+  </defs>
+  <rect width="512" height="512" rx="200" ry="200" fill="url(#bg-grad)"  clip-path="url(#canvas-clip)"/>
+  <g clip-path="url(#canvas-clip)">
+    <g transform="rotate(-6, 256, 256)">
+      
+      <text x="256" y="256" text-anchor="middle" dominant-baseline="central" font-family="'JetBrains Mono', sans-serif" font-weight="700" font-size="146" fill="#FFFFFF">Kushal</text>
+    </g>
+  </g>
+</svg>
