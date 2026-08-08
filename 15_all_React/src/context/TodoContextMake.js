@@ -1,11 +1,11 @@
 import { createContext, useContext } from "react";
 
-export const TodoContext = createContext({
+export const TodoContextMake = createContext({
     todos: [
         {
             id : Date.now(),
             todo : "Message",
-            editable : true 
+            editable : false 
         }
     ],
     addTodo : (todo)=>{},
@@ -15,4 +15,4 @@ export const TodoContext = createContext({
 });
 
 
-export const TodoProvider = TodoContext.Provider
+export const TodoProvider = TodoContextMake.Provider

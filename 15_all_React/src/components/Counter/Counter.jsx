@@ -22,7 +22,7 @@ function Counter() {
   
 
   return (
-    <div className='flex flex-col justify-center align-middle w-full items-center h-160' >
+    <div className='flex flex-col justify-center align-middle w-full items-center h-160 dark:bg-gray-950 dark:text-white light:bg-white light:text-black' >
       <h1 className='text-xl'>Counter is at</h1>
       <div className={`text-[12rem] ${number<5?"text-red-500": (number<10?"text-yellow-400":(number<20?"text-green-600":(number<25?"text-yellow-400":"text-red-500")))}`}>{number}</div>
       <div>

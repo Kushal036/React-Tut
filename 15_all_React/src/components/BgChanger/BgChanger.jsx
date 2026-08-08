@@ -6,7 +6,7 @@ function BgChanger() {
     document.getElementById('mainbox').style.backgroundColor = color;
   },[color])
   return (
-    <div id='mainbox' className='h-screen flex flex-col justify-center px-35'>
+    <div id='mainbox' className='h-screen flex flex-col justify-center px-35 '>
       
       <button className='bg-black text-white px-3 py-1 m-3 border-2 border-black  rounded-3xl hover:text-gray-400 hover:scale-125 transition duration-300 ease-in-out' onClick={()=> setColor('black')}>Black</button>
 

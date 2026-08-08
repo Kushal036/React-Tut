@@ -23,11 +23,11 @@ function CurrencyConvertor() {
   }
 
   return (
-    <div className="w-full h-screen flex flex-wrap justify-center items-center bg-cover bg-no-repeat"
+    <div className="w-full h-screen flex flex-wrap justify-center items-center bg-cover bg-no-repeat "
             style={{
                 backgroundImage: `url(${CurrencyConvertorBackground})`,
             }}>
-              <div className='backdrop-blur-md p-20 rounded-3xl text-2xl'>
+              <div className='backdrop-blur-md dark:bg-black/70 light:bg-white/50  p-20 rounded-3xl text-2xl'>
 
               
       <form onSubmit={(e)=>{
@@ -42,7 +42,7 @@ function CurrencyConvertor() {
       onAmountChange={(amount)=>setGivenAmount(amount)} 
       currencyName={FromCurrency}/>
       <div className='flex justify-center'>
-      <button className='bg-blue-600 px-5 text-2xl text-white py-2 rounded-2xl mt-5 border border-black hover:bg-blue-400 transition duration-300 ease-in-out' onClick={swap}>SWAP</button>
+      <button className='light:bg-blue-600 dark:bg-blue-900  px-5 text-2xl text-white py-2 rounded-2xl mt-5 border border-black hover:bg-blue-400 transition duration-300 ease-in-out ' onClick={swap}>SWAP</button>
       </div>
       <InputOutput 
       lable={"To"} 
@@ -54,7 +54,7 @@ function CurrencyConvertor() {
       isInputDisabled={true}/>
 
       <div className='flex justify-center'>
-      <button type="submit" className='bg-blue-600 px-5 text-2xl text-white py-2 rounded-2xl mt-5 border border-black hover:bg-blue-400 transition duration-300 ease-in-out '>Convert from {FromCurrency.toUpperCase()} to {ToCurrency.toUpperCase()}</button>
+      <button type="submit" className='light:bg-blue-600 dark:bg-blue-900  px-5 text-2xl text-white py-2 rounded-2xl mt-5 border border-black hover:bg-blue-400 transition duration-300 ease-in-out '>Convert from {FromCurrency.toUpperCase()} to {ToCurrency.toUpperCase()}</button>
       </div>
       </form>
       </div>
