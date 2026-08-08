@@ -55,7 +55,7 @@ function GitHubDetails({ gitUsername }) {
       </div>
     </div>
       </div> : <div className='text-3xl text-center p-10'>        
-        Not a User !
+        User - {gitHubData.message} !
      </div>
     }
     
