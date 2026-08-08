@@ -5,17 +5,29 @@ import heroImg from './assets/hero.png'
 import './App.css'
 import {Header , Footer } from './components/index'
 import {Outlet} from 'react-router'
-
+import { ThemeProvider } from './context/ThemeContext'
 function App() {
+    const [themeMode, setThemeMode] = useState('light')
+  const lightTheme = ()=>{
+    setThemeMode('light')
+  }
+  const darkTheme = ()=>{
+    setThemeMode('dark')
+  }
+
+  useEffect(()=>{
+    document.querySelector('html').classList.remove('dark','light')
+    document.querySelector('html').classList.add(themeMode)
+  },[themeMode])
 
   return (
-  <div className='dark'>
+  <ThemeProvider value= {{themeMode , lightTheme, darkTheme}} >
   
   <Header/>
   <Outlet/>
   <Footer/>
   
-  </div>
+  </ThemeProvider>
   )
 }
 

@@ -47,9 +47,9 @@ function RandomString() {
 
       <div>
         <input type="text" id="randomString" value={newString} readOnly className='bg-gray-200 text-2xl rounded-l-2xl px-3 py-2 font-bold border-2' />
-        <button onClick={handleCopy} className='rounded-r-2xl font-medium text-2xl  border-2 bg-blue-500 px-3 py-2 hover:bg-blue-600 transition duration-300'>Copy</button>
+        <button onClick={handleCopy} className='rounded-r-2xl font-medium text-2xl  border-2 bg-blue-500 px-3 py-2 hover:bg-blue-600 transition duration-300 cursor-pointer'>Copy</button>
         <div
-        className={`absolute left-1/2 -translate-x-1/2 top-130 px-3 py-1.5 dark:bg-gray-950 dark:text-white light:bg-black light:text-black' text-3xl font-semibold rounded-md shadow-md transition-all duration-300 ease-out whitespace-nowrap 
+        className={`absolute left-1/2 -translate-x-1/2 top-130 px-3 py-1.5 dark:bg-gray-950 dark:text-white light:bg-blue-700 light:text-white text-3xl font-semibold rounded-md shadow-md transition-all duration-300 ease-out whitespace-nowrap 
           ${copied 
             ? "opacity-100 transform translate-y-0 scale-100 visible" 
             : "opacity-0 transform translate-y-2 scale-95 invisible"
