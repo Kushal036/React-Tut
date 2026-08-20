@@ -4,31 +4,29 @@ import BasicForNews from '../../assets/BasicForNews.jpg'
 function BlogCard({image , title , content ,newsLink , sourse}) {
 
   return (
-    <div className="mx-auto max-w-md overflow-hidden rounded-xl dark:bg-gray-950 dark:text-white light:bg-gray-300 light:text-black shadow-md md:max-w-6xl my-5 border-2">
-  <div className="md:flex">
-    <div className="md:shrink-0">
-      <img
-        className="h-48 w-full object-cover md:h-full md:w-48 select-none pointer-events-none"
-        src={image ? image : BasicForNews}
-        alt="Aricle Image"
-      />
-    </div>
-    <div className="p-8">
-      <div className="text-sm font-semibold tracking-wide text-indigo-500 uppercase">{sourse}</div>
-      <h2 className="mt-1 block text-lg leading-tight font-medium dark:bg-gray-950 dark:text-white light:bg-gray-300 light:text-black hover:underline cursor-pointer">
-        {title}
-      </h2>
-      <div className="mt-2 text-gray-500 line-clamp-5 ">
-        <p className='line-clamp-5'>
-          {content}
-        </p>
-         
-        
-         <a href={newsLink} target='_blank' className='text-blue-800 mt-4 font-medium hover:underline transition ease-in-out'>ReadMore...</a>
+    <div className="mx-auto w-full overflow-hidden rounded-xl dark:bg-gray-950 dark:text-white light:bg-gray-300 light:text-black shadow-md hover:shadow-lg transition duration-300 my-3 border-2 flex flex-col h-full">
+      <div className="flex-shrink-0">
+        <img
+          className="h-40 sm:h-48 w-full object-cover select-none pointer-events-none"
+          src={image ? image : BasicForNews}
+          alt="Article Image"
+        />
+      </div>
+      <div className="p-4 sm:p-5 md:p-6 flex-grow flex flex-col">
+        <div className="text-xs sm:text-sm font-semibold tracking-wide text-indigo-500 uppercase">{sourse}</div>
+        <h2 className="mt-2 block text-base sm:text-lg md:text-lg leading-tight font-bold dark:bg-gray-950 dark:text-white light:bg-gray-300 light:text-black hover:underline cursor-pointer line-clamp-2">
+          {title}
+        </h2>
+        <div className="mt-3 text-gray-600 dark:text-gray-400 line-clamp-3 text-xs sm:text-sm flex-grow">
+          <p>
+            {content}
+          </p>
+        </div>
+        <a href={newsLink} target='_blank' rel='noopener noreferrer' className='text-blue-600 dark:text-blue-400 mt-4 inline-block font-medium hover:underline transition ease-in-out text-xs sm:text-sm'>
+          Read More →
+        </a>
       </div>
     </div>
-  </div>
-</div>
   )
 }
 

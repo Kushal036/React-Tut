@@ -34,26 +34,20 @@ function TodoContext() {
     },[todos])
 
   return (
-    <div className='flex flex-col w-full min-h-screen  justify-center mx-auto dark:bg-gray-950 light:bg-gray-300 py-20'>
-
+    <div className='flex flex-col w-full min-h-screen justify-center mx-auto dark:bg-gray-950 light:bg-gray-300 py-10 px-4 sm:py-20'>
       <TodoProvider value={{todos , addTodo , updateTodo , deleteTodo , isEditable}}> 
-        <div className='bg-gray-500 mx-auto px-20 py-10 rounded-3xl w-3/5'>
-
-      <InputTodo/>
-<div className='mx-auto mt-8'>
-
-      {
-        todos.map((todo)=>(
-          <div key={todo.id}>
-          <ShowTodos todo ={todo}/>
+        <div className='bg-gray-500 mx-auto px-4 sm:px-8 md:px-12 lg:px-20 py-6 sm:py-10 rounded-3xl w-full sm:w-3/4 md:w-2/3 lg:w-3/5 max-w-2xl'>
+          <InputTodo/>
+          <div className='mx-auto mt-6 sm:mt-8'>
+            {
+              todos.map((todo)=>(
+                <div key={todo.id}>
+                  <ShowTodos todo ={todo}/>
+                </div>
+              ))
+            }
           </div>
-        ))
-      }
-
-      
-      </div>
-      </div>
-      
+        </div>
       </TodoProvider>
     </div>
   )

@@ -23,11 +23,11 @@ function CurrencyConvertor() {
   }
 
   return (
-    <div className="w-full h-screen flex flex-wrap justify-center items-center bg-cover bg-no-repeat "
+    <div className="w-full min-h-screen flex flex-wrap justify-center items-center bg-cover bg-no-repeat px-4 py-8"
             style={{
                 backgroundImage: `url(${CurrencyConvertorBackground})`,
             }}>
-              <div className='backdrop-blur-md dark:bg-black/70 light:bg-white/50  p-20 rounded-3xl text-2xl'>
+              <div className='backdrop-blur-md dark:bg-black/70 light:bg-white/50 p-4 sm:p-8 md:p-12 lg:p-16 rounded-3xl text-base sm:text-lg md:text-lg w-full sm:w-auto max-w-sm sm:max-w-md md:max-w-2xl'>
 
               
       <form onSubmit={(e)=>{
@@ -42,7 +42,7 @@ function CurrencyConvertor() {
       onAmountChange={(amount)=>setGivenAmount(amount)} 
       currencyName={FromCurrency}/>
       <div className='flex justify-center'>
-      <button className='light:bg-blue-600 dark:bg-blue-900  px-5 text-2xl text-white py-2 rounded-2xl mt-5 border border-black hover:bg-blue-400 transition duration-300 ease-in-out ' onClick={swap}>SWAP</button>
+        <button className='light:bg-blue-600 dark:bg-blue-900 px-4 sm:px-6 md:px-8 text-base sm:text-lg md:text-lg text-white py-2 sm:py-3 rounded-2xl mt-6 md:mt-8 border border-black hover:bg-blue-400 transition duration-300 ease-in-out font-semibold' onClick={swap}>SWAP</button>
       </div>
       <InputOutput 
       lable={"To"} 
@@ -53,8 +53,8 @@ function CurrencyConvertor() {
       currencyName={ToCurrency}
       isInputDisabled={true}/>
 
-      <div className='flex justify-center'>
-      <button type="submit" className='light:bg-blue-600 dark:bg-blue-900  px-5 text-2xl text-white py-2 rounded-2xl mt-5 border border-black hover:bg-blue-400 transition duration-300 ease-in-out '>Convert from {FromCurrency.toUpperCase()} to {ToCurrency.toUpperCase()}</button>
+      <div className='flex justify-center mt-6 md:mt-8'>
+        <button type="submit" className='light:bg-blue-600 dark:bg-blue-900 px-4 sm:px-6 md:px-8 text-base sm:text-lg md:text-lg text-white py-2 sm:py-3 rounded-2xl border border-black hover:bg-blue-400 transition duration-300 ease-in-out font-semibold whitespace-normal'>Convert {FromCurrency.toUpperCase()} to {ToCurrency.toUpperCase()}</button>
       </div>
       </form>
       </div>
