@@ -2,11 +2,14 @@ import React, { useState } from 'react'
 import whatsapplogo from '../../assets/whatsapp.jpg'
 
 function ContactMe() {
+  const phoneNumber = String(import.meta.env.VITE_PHONE_NUMBER)
+
+  
   const [message, setMessage] = useState('Hi Kushal, I would like to connect with you.')
 
   const handleSubmit = (event) => {
     event.preventDefault()
-    const url = `https://wa.me/9996700107?text=${encodeURIComponent(message)}`
+    const url = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`
     window.open(url, '_blank', 'noopener,noreferrer')
   }
 
