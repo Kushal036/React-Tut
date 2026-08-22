@@ -78,6 +78,11 @@ function Header() {
                                     } >
         ToDo
         </NavLink>
+        <NavLink to='/contact' className={({isActive}) =>
+                                    `${isActive ? "text-orange-500":"dark:text-white light:text-black"  } px-2 py-1 rounded-2xl text-sm border-transparent border-2 hover:text-gray-900 transition duration-300 ease-in-out flex items-center text-center font-bold`
+                                    } >
+        Contact
+        </NavLink>
 
 
       </div>
@@ -173,6 +178,11 @@ function Header() {
                                       `${isActive ? "text-orange-500":"dark:text-white light:text-black"  } px-3 py-2 rounded-lg border-transparent border-2 hover:bg-gray-200 dark:hover:bg-gray-800 transition duration-300 ease-in-out font-bold`
                                       } >
           ToDo
+          </NavLink>
+          <NavLink to='/contact' onClick={closeMenu} className={({isActive}) =>
+                                      `${isActive ? "text-orange-500":"dark:text-white light:text-black"  } px-3 py-2 rounded-lg border-transparent border-2 hover:bg-gray-200 dark:hover:bg-gray-800 transition duration-300 ease-in-out font-bold`
+                                      } >
+          Contact
           </NavLink>
         </div>
       )}

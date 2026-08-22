@@ -8,5 +8,5 @@ import CurrencyConvertor from './CurrencyConvertor/CurrencyConvertor'
 import RandomString from './RandonString/RandomString'
 import ThemeChanger from './ThemeChanger/ThemeChanger'
 import TodoContext from './TodoContext/TodoContext'
-
-export {Header , Footer , Home , BgChanger , Cards , Counter , CurrencyConvertor , RandomString ,ThemeChanger , TodoContext}
+import ContactMe from './ContactMe/ContactMe'
+export {Header , Footer , Home , BgChanger , Cards , Counter , CurrencyConvertor , RandomString ,ThemeChanger , TodoContext , ContactMe}

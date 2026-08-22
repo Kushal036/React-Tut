@@ -3,7 +3,7 @@ import { createRoot } from 'react-dom/client'
 import './index.css'
 import App from './App.jsx'
 import { createBrowserRouter, createRoutesFromElements, Route, RouterProvider } from 'react-router'
-import {Home , BgChanger , Cards , Counter , CurrencyConvertor , RandomString ,ThemeChanger , TodoContext} from './components/index.js'
+import {Home , BgChanger , Cards , Counter , CurrencyConvertor , RandomString ,ThemeChanger , TodoContext , ContactMe} from './components/index.js'
 
 
 const router = createBrowserRouter(
@@ -17,6 +17,7 @@ const router = createBrowserRouter(
       <Route path = 'currencyConvertor' element = { <CurrencyConvertor/> }/>
       <Route path = 'themeChanger' element = { <ThemeChanger/> }/>
       <Route path = 'todoContext' element = { <TodoContext/> }/>
+      <Route path = 'contact' element = { <ContactMe/> }/>
       
 
     </Route>
